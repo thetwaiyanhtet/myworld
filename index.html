@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My World</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <img src="./144p.jpg" alt="..." id="displayedImage" width="400px">
+    <select name="imgs" id="imgs">
+        <option value="144p.jpg">144p</option>
+        <option value="240p.jpg">240p</option>
+        <option value="480p.jpg">480p</option>
+        <option value="720p.jpg">720p</option>
+        <option value="1080p.jpg">1080p</option>
+    </select>
+</body>
+
+<script>
+    const selectElement = document.getElementById('imgs');
+    const displayedImage = document.getElementById('displayedImage');
+
+    selectElement.addEventListener('change', function () {
+        const selectedValue = selectElement.value;
+        displayedImage.src = selectedValue;
+    });
+</script>
+
+</html>
